@@ -26,5 +26,8 @@ print(url)
 with requests.get(url) as response:  # το αντικείμενο response
     # for key in response.headers:
     #     print(f"Name: {key}, Value: {response.headers[key]}")
+
     print(f"Server: {response.headers.get('Server')}")
+
+    print(f"Has cookies: {'Set-Cookie' in response.headers}")
 
