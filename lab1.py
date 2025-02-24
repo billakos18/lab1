@@ -18,3 +18,8 @@ def more(text):
 url  = input("give url:\t")
 
 print(url)
+
+with requests.get(url) as response:  # το αντικείμενο response
+    print(response.text)
+    # html = response.text
+    # more(html)
