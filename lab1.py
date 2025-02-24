@@ -28,5 +28,4 @@ with requests.get(url) as response:  # το αντικείμενο response
     print(f"Has cookies: {'Set-Cookie' in response.headers}")
 
     for cookie in response.cookies:
-        print(f"Cookie name: {cookie.name}\tExpiration date: {datetime.datetime.fromtimestamp(cookie.expires)}")
-
+        print(f"Cookie name: {cookie.name}\tExpiration date: {datetime.datetime.fromtimestamp(cookie.expires) if cookie.expires else "Does not expire"}")
