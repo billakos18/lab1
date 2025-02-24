@@ -24,6 +24,7 @@ if not url.startswith('https://'):
 print(url)
 
 with requests.get(url) as response:  # το αντικείμενο response
-    for key in response.headers:
-        print(f"Name: {key}, Value: {response.headers[key]}")
+    # for key in response.headers:
+    #     print(f"Name: {key}, Value: {response.headers[key]}")
+    print(f"Server: {response.headers.get('Server')}")
 
